@@ -23,7 +23,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="th">
+      <body className="min-h-full flex flex-col bg-[#FDFBF7] text-[#3D2B1F] antialiased">
+        {children}
+      </body>
     </html>
   );
 }
